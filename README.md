@@ -1,46 +1,51 @@
-# Astro Starter Kit: Basics
+# Portfolio — Andrés Méndez
 
-```sh
-bun create astro@latest -- --template basics
+Portafolio personal desarrollado con Astro, React y Tailwind CSS.
+
+🌐 [andfelipeme.duckdns.org](https://andfelipeme.duckdns.org)
+
+## Stack
+
+- [Astro](https://astro.build)
+- [React](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+
+## Correr en local
+
+```bash
+git clone https://github.com/andfelipeme/portfolio.git
+cd portfolio
+bun install
+bun run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Build
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```bash
+bun run build
+bun run preview
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Deploy
 
-## 🧞 Commands
+El sitio está hosteado en un VPS con Apache y Ubuntu. Para actualizar:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+./deploy.sh
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+## Estructura
 
-## 👀 Want to learn more?
+```
+src/
+  components/    # Componentes reutilizables
+  content/blog/  # Posts en Markdown
+  layouts/       # Layout principal
+  pages/         # Rutas del sitio
+  assets/        # Imágenes optimizadas
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Licencia
+
+MIT
