@@ -1,22 +1,22 @@
 ---
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { Image } from "astro:assets";
+import posImg from "../assets/projects/pos.webp";
+import mapiImg from "../assets/projects/mapi-ant.webp";
 
 const projects = [
   {
     title: "POS System",
-    description:
-      "Sistema de punto de venta completo con gestión de inventario, ventas y reportes en tiempo real.",
-    image: "/pos.webp",
+    description: "Sistema de punto de venta completo con gestión de inventario, ventas y reportes en tiempo real.",
+    image: posImg,
     stack: ["Laravel", "React", "PostgreSQL", "Inertia", "Tailwind"],
-    repo: "https://github.com/andfelipeme/pos",
     deploy: "https://posvhaj.duckdns.org/login",
     private: true,
   },
   {
     title: "Mapi Ant",
-    description:
-      "Controlador de gastos personales con dashboard de estadísticas, categorías y seguimiento mensual.",
-    image: "/mapi-ant.webp",
+    description: "Controlador de gastos personales con dashboard de estadísticas, categorías y seguimiento mensual.",
+    image: mapiImg,
     stack: ["Next.js", "React", "Tailwind"],
     repo: "https://github.com/andfelipeme/mapi-ant",
     deploy: "https://mapi-ant.duckdns.org/",
@@ -43,12 +43,13 @@ const projects = [
 
           <!-- Imagen -->
           <div class="relative overflow-hidden h-52">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
+              width={800}
+              height={364}
               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
-            <!-- Overlay sutil -->
             <div class="absolute inset-0 bg-linear-to-t from-bg-card/80 to-transparent" />
           </div>
 
