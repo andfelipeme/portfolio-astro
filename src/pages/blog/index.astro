@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("es-CO", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+---
+
+<Layout
+  title="Blog · Andrés Méndez"
+  description="Artículos sobre desarrollo web, Astro, Laravel y React."
+>
+  <main>
+    <section class="py-20">
+
+      <!-- Título -->
+      <div class="flex flex-col gap-2 mb-12">
+        <p class="text-sm text-muted uppercase tracking-widest">Escritura</p>
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Mi <span class="text-accent">Blog</span>
+        </h2>
+      </div>
+
+      <!-- Lista de posts -->
+      <div class="flex flex-col divide-y divide-white/10">
+        {
+          posts.map((post) => (
+            <a
+              href={`/blog/${post.slug}`}
+              class="flex flex-col gap-3 py-8 group hover:pl-2 transition-all duration-200"
+            >
+              <!-- Tags -->
+              <div class="flex gap-2 flex-wrap">
+                {post.data.tags.map((tag) => (
+                  <span class="text-xs px-3 py-1 rounded-full border border-accent/30 text-accent bg-accent/5">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Título -->
+              <h3 class="text-xl font-bold text-text group-hover:text-accent transition-colors duration-200">
+                {post.data.title}
+              </h3>
+
+              <!-- Descripción -->
+              <p class="text-muted text-sm leading-relaxed max-w-2xl">
+                {post.data.description}
+              </p>
+
+              <!-- Fecha -->
+              <p class="text-xs text-muted/60">{formatDate(post.data.date)}</p>
+            </a>
+          ))
+        }
+      </div>
+
+      <!-- Sin posts -->
+      {
+        posts.length === 0 && (
+          <p class="text-muted text-center py-20">
+            Pronto habrá contenido aquí. ¡Vuelve pronto!
+          </p>
+        )
+      }
+    </section>
+  </main>
+</Layout>

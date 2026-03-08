@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import miImagen from "../assets/onefoto.webp";
+import { FaLaravel, FaReact } from "react-icons/fa";
+import {
+  SiPostgresql,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiAstro,
+  SiExpo,
+} from "react-icons/si";
+---
+
+<section class="flex items-center py-15">
+  <div
+    class="flex flex-col md:flex-row items-center justify-between gap-16 w-full"
+  >
+    <!-- IZQUIERDA: Texto -->
+    <div
+      class="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left items-center md:items-start"
+    >
+      <!-- Badge -->
+      <div
+        class="flex items-center gap-2 w-fit px-4 py-2 rounded-full border border-white/10 bg-accent/10"
+      >
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        <span class="text-sm text-muted">Disponible para trabajar</span>
+      </div>
+
+      <!-- Nombre y rol -->
+      <div class="flex flex-col gap-2">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+          Hola, soy <br />
+          <span class="text-accent">Andrés Méndez</span>
+        </h1>
+        <p class="text-xl text-muted">Fullstack Developer</p>
+      </div>
+
+      <!-- Descripción -->
+      <p class="text-muted text-base leading-relaxed max-w-md">
+        Construyo aplicaciones web modernas, rápidas y escalables. Con
+        experiencia en backend robusto y frontends limpios que los usuarios
+        disfrutan.
+      </p>
+
+      <!-- Botones -->
+      <div class="flex gap-4 flex-wrap justify-center md:justify-start">
+        <a
+          href="/projects"
+          class="px-6 py-3 rounded-xl font-semibold text-white
+        bg-linear-to-r from-accent to-accent-dark transition-all duration-200
+        hover:opacity-90 hover:scale-105"
+        >
+          Ver proyectos
+        </a>
+        <a
+          href="https://www.linkedin.com/in/andfelipeme-developer/"
+          target="_blank"
+          class="px-6 py-3 rounded-xl font-semibold text-muted border border-white/20 hover:border-white/50 hover:text-white transition-all duration-200"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Stack -->
+      <div class="flex flex-col gap-3 items-center md:items-start">
+        <p class="text-sm text-muted uppercase tracking-widest">Stack</p>
+        <div
+          class="flex gap-4 flex-wrap items-center justify-center md:justify-start"
+        >
+          <FaLaravel
+            className="text-3xl"
+            style={{ color: "#FF2D20" }}
+            title="Laravel"
+          />
+          <FaReact
+            className="text-3xl"
+            style={{ color: "#61DAFB" }}
+            title="React"
+          />
+          <SiNextdotjs className="text-3xl text-white" title="Next.js" />
+          <SiPostgresql
+            className="text-3xl"
+            style={{ color: "#336791" }}
+            title="PostgreSQL"
+          />
+          <SiTailwindcss className="text-3xl text-accent" title="Tailwind" />
+          <SiAstro className="text-3xl text-white" title="Astro" />
+          <SiExpo className="text-3xl text-white" title="Expo" />
+        </div>
+      </div>
+    </div>
+
+    <!-- DERECHA: Foto -->
+    <div class="w-full md:w-1/2 flex justify-center order-first md:order-last">
+      <div class="relative">
+        <div
+          class="absolute inset-0 rounded-full blur-3xl opacity-30 scale-110"
+          style="background: radial-gradient(circle, #38bdf8, transparent);"
+        >
+        </div>
+        <Image
+          src={miImagen}
+          alt="Andrés Méndez"
+          width={420}
+          height={420}
+          loading="eager"
+          fetchpriority="high"
+          class="relative rounded-full object-cover border-2 border-white/10"
+          style="width: 380px; height: 380px;"
+        />
+      </div>
+    </div>
+  </div>
+</section>

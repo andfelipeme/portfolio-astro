@@ -1,0 +1,55 @@
+---
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+---
+
+<footer class="py-10 mt-10 border-t border-white/10">
+  <div class="flex flex-col items-center gap-6">
+    <!-- Tagline -->
+    <p class="text-muted text-sm text-center italic">
+      "Transformando ideas en soluciones digitales."
+    </p>
+
+    <!-- Iconos redes -->
+    <div class="flex flex-col sm:flex-row gap-6 items-center">
+      <div class="flex gap-4">
+        <a
+          href="https://github.com/andfelipeme"
+          target="_blank"
+          aria-label="GitHub de Andrés Méndez"
+          class="text-muted hover:text-white transition-colors duration-200"
+        >
+          <FaGithub className="text-2xl" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/andresfelipeme/"
+          target="_blank"
+          aria-label="LinkedIn de Andrés Méndez"
+          class="text-muted hover:text-accent transition-colors duration-200"
+        >
+          <FaLinkedin className="text-2xl" />
+        </a>
+
+        <a
+          href="https://www.instagram.com/andfelipeme/"
+          target="_blank"
+          aria-label="Instagram de Andrés Méndez"
+          class="text-muted hover:text-pink-400 transition-colors duration-200"
+        >
+          <FaInstagram className="text-2xl" />
+        </a>
+      </div>
+
+      <!-- Divisor -->
+      <div class="w-24 h-px bg-white/10"></div>
+
+      <!-- Copyright -->
+      <p class="text-muted text-xs text-center">
+        Diseñado y desarrollado por{" "}
+        <span class="text-accent font-medium">Andrés Méndez</span> &copy; {
+          new Date().getFullYear()
+        }
+      </p>
+    </div>
+  </div>
+</footer>
