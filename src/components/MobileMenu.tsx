@@ -62,7 +62,7 @@ export default function MobileMenu() {
               <FaGithub className="text-xl" />
             </a>
             <a
-              href="https://www.linkedin.com/in/andfelipeme-frontend-junior-mecatronica-3d-javascript-react/"
+              href="https://www.linkedin.com/in/andfelipeme-fullstack/"
               target="_blank"
               className="flex items-center gap-2 text-lg text-slate-300 hover:text-white transition-colors duration-200"
             >
