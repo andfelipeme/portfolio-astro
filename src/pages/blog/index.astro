@@ -34,7 +34,7 @@ const formatDate = (date: Date) =>
         {
           posts.map((post) => (
             <a
-              href={`/blog/${post.slug}`}
+              href={`/blog/${post.id.replace(/\.md$/, "")}`}
               class="flex flex-col gap-3 py-8 group hover:pl-2 transition-all duration-200"
             >
               <!-- Tags -->
