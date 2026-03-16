@@ -57,6 +57,7 @@ export default function MobileMenu() {
             <a
               href="https://github.com/andfelipeme"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-lg text-slate-300 hover:text-white transition-colors duration-200"
             >
               <FaGithub className="text-xl" />
@@ -64,6 +65,7 @@ export default function MobileMenu() {
             <a
               href="https://www.linkedin.com/in/andfelipeme-fullstack/"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-lg text-slate-300 hover:text-white transition-colors duration-200"
             >
               <FaLinkedin className="text-xl" />
@@ -71,6 +73,7 @@ export default function MobileMenu() {
             <a
               href="https://www.instagram.com/andmendezfor/"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-lg text-slate-300 hover:text-white transition-colors duration-200"
             >
               <FaInstagram className="text-xl" />

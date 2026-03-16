@@ -3,6 +3,8 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { Image } from "astro:assets";
 import posImg from "../assets/projects/pos.webp";
 import mapiImg from "../assets/projects/mapi-ant.webp";
+import vhajImg from "../assets/projects/vhajdev.webp";
+import vhajTask from "../assets/projects/vhajtask.webp";
 
 const projects = [
   {
@@ -22,6 +24,25 @@ const projects = [
     deploy: "https://mapi-ant.duckdns.org/",
     private: false,
   },
+  {
+    title: "Vhaj Landing",
+    description: "Landing page para Vhaj, una empresa que desarrolla soluciones digitales a medida.",
+    image: vhajImg,
+    stack: ["Astro", "Tailwind", "Cloudflare"],
+    repo: "https://github.com/andfelipeme/vhaj-landing",
+    deploy: "https://vhajdev.cloud",
+    private: false,
+  },
+  {
+    title: "VhajTask",
+    description: "Sistema de gestión de tareas para Vhaj, controlador de notas y tareas para el equipo de trabajo.",
+    image: vhajTask,
+    stack: ["Laravel", "Blade", "Tailwind", "PostgreSQL"],
+    repo: "https://github.com/andfelipeme/vhaj-notas-v.Claude",
+    deploy: "https://vhajtask.duckdns.org/login",
+    private: false,
+  },
+
 ];
 ---
 
@@ -79,6 +100,7 @@ const projects = [
                 <a
                   href={project.repo}
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="flex items-center gap-2 text-sm text-muted hover:text-white transition-colors duration-200"
                 >
                   <FaGithub className="text-lg" />
@@ -89,6 +111,7 @@ const projects = [
               <a
                 href={project.deploy}
                 target="_blank"
+                rel="noopener noreferrer"
                 class="flex items-center gap-2 text-sm text-muted hover:text-accent transition-colors duration-200"
               >
                 <FaExternalLinkAlt className="text-sm" />
